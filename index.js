@@ -27,7 +27,7 @@ const bot6 = new Telegraf(BOT_TOKEN_6);
 const JADE_VEGAS = new Telegraf(BOT_JADEVEGAS);
 
 // Cron job para procesar la base de datos
-cron.schedule("*/10 * * * * *", async () => {
+cron.schedule("0 * * * *", async () => {
     try {
         const timestampActual = Date.now();
         const query = `SELECT * FROM Autentications WHERE time <= ${timestampActual}`;
